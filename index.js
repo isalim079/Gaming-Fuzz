@@ -28,6 +28,7 @@ async function run() {
 
         const brandShopCollection = client.db("brandShopDB").collection("brandShopData")
         const brandShopUserCollection = client.db("brandShopDB").collection("brandShopUser")
+        const brandShopCartCollection = client.db("brandShopDB").collection("brandShopCart")
 
         app.get("/brands", async (req, res) => {
             const cursor = brandShopCollection.find()
@@ -46,15 +47,67 @@ async function run() {
             const result = await cursor.toArray()
             res.send(result)
         })
+        
+        app.get("/brandShopCarts", async (req, res) => {
+            const cursor = brandShopCartCollection.find()
+            const result = await cursor.toArray()
+            res.send(result)
+        })
+
+        app.get("/brandShopCarts/:id", async(req, res)=> {
+            const id = req.params.id
+            const query = {_id: id}
+            const result = await brandShopCartCollection.findOne(query)
+            res.send(result)
+        })
+
+        // For Delete
+        app.delete("/brandShopCarts/:id", async(req, res)=> {
+            const id = req.params.id
+            const query = {_id: id}
+            const result = await brandShopCartCollection.deleteOne(query)
+            res.send(result)
+        })
+
 
         app.post("/brands", async(req, res) => {
             const brandsData = req.body
             const result = await brandShopCollection.insertOne(brandsData)
             res.send(result)
         })
+
         app.post("/brandsShopUsers", async(req, res) => {
             const brandsData = req.body
             const result = await brandShopUserCollection.insertOne(brandsData)
+            res.send(result)
+        })
+
+        app.post("/brandShopCarts", async(req, res) => {
+            const brandsData = req.body
+            const result = await brandShopCartCollection.insertOne(brandsData)
+            res.send(result)
+        })
+
+       
+
+        app.put("brands/:id", async (req, res)=> {
+            const id = req.params.id
+            const brandsData = req.body
+            const filter = {_id: new ObjectId(id)}
+            const options = {upsert: true}
+            const updateUser = {
+                $set: {
+                    name : brandsData.name,
+                    image : brandsData.image,
+                    productType : brandsData.productType,
+                    price : brandsData.price,
+                    description : brandsData.description,
+                    brand : brandsData.brand,
+                    rating : brandsData.rating,
+                    bannerImage: brandsData.bannerImage
+                }
+            }
+            const result = await brandShopCollection.updateOne(filter, updateUser, options)
             res.send(result)
         })
 
