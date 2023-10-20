@@ -89,7 +89,6 @@ async function run() {
         })
 
        
-
         app.put("/brands/:id", async (req, res)=> {
             const id = req.params.id
             const brandsData = req.body
