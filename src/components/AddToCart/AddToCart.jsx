@@ -1,5 +1,6 @@
 import { useLoaderData } from "react-router-dom";
 import { AiTwotoneDelete } from "react-icons/ai";
+
 import { useContext, useState } from "react";
 
 import Swal from "sweetalert2";
@@ -27,9 +28,12 @@ const AddToCart = () => {
             confirmButtonText: "Yes, delete it!",
         }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`https://assignment-10-brand-shop-server-j0bn87ub5-i-salim079.vercel.app/brandShopCarts/${id}`, {
-                    method: "DELETE",
-                })
+                fetch(
+                    `https://assignment-10-brand-shop-server-j0bn87ub5-i-salim079.vercel.app/brandShopCarts/${id}`,
+                    {
+                        method: "DELETE",
+                    }
+                )
                     .then((res) => res.json())
                     .then((data) => {
                         console.log(data);
@@ -69,11 +73,10 @@ const AddToCart = () => {
                         <tbody>
                             {/* row 1 */}
 
-                            {products.map((cartProduct, index) => (
+                            {products.map((cartProduct) => (
                                 <>
                                     {user.email === cartProduct.email ? (
                                         <tr>
-                                            <th>{index + 1}</th>
                                             <td>{cartProduct.name}</td>
                                             <td>{cartProduct.productType}</td>
                                             <td className="uppercase">
