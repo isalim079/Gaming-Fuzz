@@ -37,7 +37,7 @@ const UpdateProduct = () => {
             bannerImage,
         };
 
-        fetch(`https://assignment-10-brand-shop-server-hcr1i0t18-i-salim079.vercel.app/brands/${loadProducts._id}`, {
+        fetch(`https://assignment-10-brand-shop-server-j0bn87ub5-i-salim079.vercel.app/brands/${loadProducts._id}`, {
             method: "PUT",
             headers: {
                 "content-type": "application/json",

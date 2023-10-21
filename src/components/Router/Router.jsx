@@ -41,7 +41,7 @@ const Router = createBrowserRouter([
             {
                 path: "/sixBrands/:brands",
                 element: <SixBrand></SixBrand>,
-                loader: () => fetch("https://assignment-10-brand-shop-server-hcr1i0t18-i-salim079.vercel.app/brands"),
+                loader: () => fetch("https://assignment-10-brand-shop-server-j0bn87ub5-i-salim079.vercel.app/brands"),
             },
             {
                 path: "/productDetails/:brands",
@@ -50,7 +50,7 @@ const Router = createBrowserRouter([
                         <ProductDetails></ProductDetails>
                     </PrivateRoute>
                 ),
-                loader: () => fetch("https://assignment-10-brand-shop-server-hcr1i0t18-i-salim079.vercel.app/brands"),
+                loader: () => fetch("https://assignment-10-brand-shop-server-j0bn87ub5-i-salim079.vercel.app/brands"),
             },
             {
                 path: "/myCarts",
@@ -59,7 +59,7 @@ const Router = createBrowserRouter([
                         <AddToCart></AddToCart>
                     </PrivateRoute>
                 ),
-                loader: () => fetch("https://assignment-10-brand-shop-server-hcr1i0t18-i-salim079.vercel.app/brandShopCarts"),
+                loader: () => fetch("https://assignment-10-brand-shop-server-j0bn87ub5-i-salim079.vercel.app/brandShopCarts"),
             },
             {
                 path: "/updateProducts/:id",
@@ -68,7 +68,7 @@ const Router = createBrowserRouter([
                         <UpdateProduct></UpdateProduct>
                     </PrivateRoute>
                 ),
-                loader: ({params}) => fetch(`https://assignment-10-brand-shop-server-hcr1i0t18-i-salim079.vercel.app/brands/${params.id}`)
+                loader: ({params}) => fetch(`https://assignment-10-brand-shop-server-j0bn87ub5-i-salim079.vercel.app/brands/${params.id}`)
             },
         ],
     },
