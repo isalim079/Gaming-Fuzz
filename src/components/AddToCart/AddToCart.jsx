@@ -61,7 +61,7 @@ const AddToCart = () => {
                         {/* head */}
                         <thead>
                             <tr>
-                                <th></th>
+                                
                                 <th>Product Name</th>
                                 <th>Product type</th>
                                 <th>Brand</th>
