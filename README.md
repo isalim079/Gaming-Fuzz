@@ -1,7 +1,7 @@
 # Brand Shop -React project
 
 ## Project overview:
-    > This is a website for tech shop. Who sells many tech items on their shop. In this website you can see basic light animation when you entered website. You can view your desire items by category. In this project I use React, Tailwind CSS, DaisyUI and some other framework. There is a login system with email and also there is available social login system. Hope you like it.
+     This is a website for tech shop. Who sells many tech items on their shop. In this website you can see basic light animation when you entered website. You can view your desire items by category. In this project I use React, Tailwind CSS, DaisyUI and some other framework. There is a login system with email and also there is available social login system. Hope you like it.
 
 Brand Shop is a website that handle many branded products. Some feature in this website are:
 
