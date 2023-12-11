@@ -1,16 +1,13 @@
-# Brand Shop -React project
+# GamingFuzz
 
-## Project overview:
-This is a website for tech shop. Who sells many tech items on their shop. In this website you can see basic light animation when you entered website. You can view your desire items by category. In this project I use React, Tailwind CSS, DaisyUI and some other framework. There is a login system with email and also there is available social login system. Hope you like it.
+GamingFuzz is a website that handle many event and provide many services. Some feature in this website are:
 
-Brand Shop is a website that handle many branded products. Some feature in this website are:
+* In this website I use firebase. Which will authorize user by their email password and google
+* There are 3 private route. Unauthorized user cannot see that route details
+* There are email and password validation in registration page as requirement in project description
+* This website is responsive in computer and mobile view
+* I use scroll effect on home page. Also some hover effect in some section. It will give you some good vibe
 
-* In this website I use mongodb server for database
-* All the data is in the server. You can modify all data by form
-* You can add product by your own. Which will be in database. Also you can edit them for site
-* This website is responsive in computer and mobile view. Also there is a toggle button for dark and light theme
-* Private route added. So that only verified user can access database and add or update product list
-* This is live site link: 
-    > https://brand-shop-daf8a.web.app
-
+### Live website: 
+    > https://gaming-fuzz.web.app/
 
